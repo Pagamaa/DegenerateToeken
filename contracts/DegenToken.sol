@@ -27,34 +27,44 @@ contract AraAraERC20 is ERC20, Ownable {
         return transferFrom(sender, recipient, amount);
     }
 
-
     function checkBalance() public view returns(uint256){
         return balanceOf(msg.sender);
     }
 
-    function browseMerch() public pure returns(string memory items){
-        items = "Welcome to Degen Merch Store~! 1. Official Degen NFT Jersey 2. Official Degen NFT Coin Figure 3. Official Degen NFT Cap";
+    function ShowItems() public pure returns(string memory items){
+        items = "Who is your future lover?1. Karina\n2. Chaewon\n3. Winter\n4. Minju\n5. Haerin\n6. Eunchae";
         return items;
     }
 
-    function redeemTokens(uint choice) public{
+    function redeemTokens(uint choice) public {
         string memory merch;
         uint256 price;
-        if(choice == 1){
-            require(balanceOf(msg.sender) >= 20, "You do not have enough Degen Tokens");
-            price = 20;
-            merch = "Official Degen NFT Jersey";
-        } else if(choice == 2){
-            require(balanceOf(msg.sender) >= 15, "You do not have enough Degen Tokens");
+
+        if (choice == 1) {
+            price = 5;
+            merch = "Karina";
+        } else if (choice == 2) {
+            price = 10;
+            merch = "Chaewon";
+        } else if (choice == 3) {
             price = 15;
-            merch = "Official Degen NFT Coin Figure";
-        } else if(choice == 3){
-            require(balanceOf(msg.sender) >= 8, "You do not have enough Degen Tokens");
-            price = 8;
-            merch = "Official Degen NFT Cap";
+            merch = "Winter";
+        } else if (choice == 4) {
+            price = 20;
+            merch = "Minju";
+        } else if (choice == 5) {
+            price = 25;
+            merch = "Haerin";
+        } else if (choice == 6) {
+            price = 40;
+            merch = "Eunchae";
+        } else {
+            revert("Invalid choice");
         }
+
+        require(balanceOf(msg.sender) >= price, "You do not have enough Degen Tokens");
         _burn(msg.sender, price);
-        emit RedeemedMerch(_msgSender(), choice, merch);
+        emit RedeemedMerch(_msgSender(), choice, string(abi.encodePacked(merch, " is now your girlfriend")));
     }
 
     event RedeemedMerch(
@@ -63,4 +73,3 @@ contract AraAraERC20 is ERC20, Ownable {
         string merch
     );
 }
-
