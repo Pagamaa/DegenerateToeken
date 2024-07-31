@@ -27,6 +27,8 @@ The `DegenToken.sol` contract is an ERC20 token implementation that allows the o
    - In the Remix IDE, navigate to the "Solidity Compiler" tab.
    - Select the correct compiler version (`0.8.26`).
    - Click on "Compile DegenToken.sol".
+   - ![image](https://github.com/user-attachments/assets/87398ccc-82f8-4e1b-a47b-9f818042f6f9)
+
 
 2. **Deploy the Contract:**
    - Navigate to the "Deploy & Run Transactions" tab.
@@ -37,6 +39,11 @@ The `DegenToken.sol` contract is an ERC20 token implementation that allows the o
 3. **Interact with the Deployed Contract:**
    - Use the Remix IDE interface to interact with the contract's functions.
    - Example interactions:
+   - name it Degen and DGN
+![image](https://github.com/user-attachments/assets/eb1e7c79-2c6e-4e2e-922e-af52511f3bf1)
+Use the functions in this part of the window, make sure you check your account and who is using it before minting to prevent errors
+![image](https://github.com/user-attachments/assets/d30feb59-02c6-4fa4-a328-dfbf55996725)
+
 
 
 ## Help
