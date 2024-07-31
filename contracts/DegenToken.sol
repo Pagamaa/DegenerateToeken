@@ -5,6 +5,14 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract AraAraERC20 is ERC20, Ownable {
+    struct Redemption {
+        uint256 choice;
+        string merch;
+        bool redeemed;
+    }
+
+    mapping(address => Redemption) private redemptions;
+
     constructor(string memory name, string memory symbol) ERC20(name, symbol) Ownable(msg.sender) {}
 
     // Function to mint new tokens, only accessible by the contract owner
@@ -22,17 +30,12 @@ contract AraAraERC20 is ERC20, Ownable {
         return transfer(recipient, amount);
     }
 
-    // Function to approve and transfer tokens from another account
-    function transferFromAccount(address sender, address recipient, uint256 amount) external returns (bool) {
-        return transferFrom(sender, recipient, amount);
-    }
-
-    function checkBalance() public view returns(uint256){
+    function checkBalance() public view returns(uint256) {
         return balanceOf(msg.sender);
     }
 
-    function ShowItems() public pure returns(string memory items){
-        items = "Who is your future lover?1. Karina\n2. Chaewon\n3. Winter\n4. Minju\n5. Haerin\n6. Eunchae";
+    function ShowItems() public pure returns(string memory items) {
+        items = "Who is your future lover?\n1. Karina\n2. Chaewon\n3. Winter\n4. Minju\n5. Haerin\n6. Eunchae";
         return items;
     }
 
@@ -64,7 +67,14 @@ contract AraAraERC20 is ERC20, Ownable {
 
         require(balanceOf(msg.sender) >= price, "You do not have enough Degen Tokens");
         _burn(msg.sender, price);
+        redemptions[msg.sender] = Redemption(choice, merch, true);
         emit RedeemedMerch(_msgSender(), choice, string(abi.encodePacked(merch, " is now your girlfriend")));
+    }
+
+    function getRedemptionMessage() public view returns (string memory) {
+        Redemption memory redemption = redemptions[msg.sender];
+        require(redemption.redeemed, "No token redeemed yet");
+        return string(abi.encodePacked(redemption.merch, " is now your girlfriend"));
     }
 
     event RedeemedMerch(
