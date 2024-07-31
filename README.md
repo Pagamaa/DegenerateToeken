@@ -1,3 +1,6 @@
+Here's a polished version of the README, with improved formatting and clearer instructions:
+
+```markdown
 # DegenToken
 
 A simple ERC20 token with additional features for minting, burning, transferring, and redeeming tokens for virtual merchandise.
@@ -27,24 +30,24 @@ The `DegenToken.sol` contract is an ERC20 token implementation that allows the o
    - In the Remix IDE, navigate to the "Solidity Compiler" tab.
    - Select the correct compiler version (`0.8.26`).
    - Click on "Compile DegenToken.sol".
-   - ![image](https://github.com/user-attachments/assets/87398ccc-82f8-4e1b-a47b-9f818042f6f9)
 
+   ![Compile Contract](https://github.com/user-attachments/assets/87398ccc-82f8-4e1b-a47b-9f818042f6f9)
 
 2. **Deploy the Contract:**
    - Navigate to the "Deploy & Run Transactions" tab.
-   - Select the environment 
+   - Select the environment (e.g., JavaScript VM, Injected Web3).
    - Ensure your wallet is connected if using Injected Web3.
    - Click on "Deploy".
 
 3. **Interact with the Deployed Contract:**
    - Use the Remix IDE interface to interact with the contract's functions.
-   - Example interactions:
-   - name it Degen and DGN
-![image](https://github.com/user-attachments/assets/eb1e7c79-2c6e-4e2e-922e-af52511f3bf1)
-   -Use the functions in this part of the window, make sure you check your account and who is using it before minting to prevent errors
-![image](https://github.com/user-attachments/assets/d30feb59-02c6-4fa4-a328-dfbf55996725)
+   - Set the name of the token to `Degen` and the symbol to `DGN`.
 
+   ![Deploy Contract](https://github.com/user-attachments/assets/eb1e7c79-2c6e-4e2e-922e-af52511f3bf1)
 
+   - Use the functions in the "Deployed Contracts" section. Ensure you check your account and who is using it before minting to prevent errors.
+
+   ![Interact with Contract](https://github.com/user-attachments/assets/d30feb59-02c6-4fa4-a328-dfbf55996725)
 
 ## Help
 
@@ -58,3 +61,6 @@ If you encounter common issues or problems, consider the following:
 
 Peter Aguilar  
 [GitHub](https://github.com/Pagamaa)
+```
+
+You can copy and paste this into your `README.md` file on GitHub. This format is more organized and provides clear instructions with visual aids for deploying and interacting with the contract.
