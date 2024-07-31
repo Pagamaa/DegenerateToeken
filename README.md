@@ -1,6 +1,3 @@
-Here's a polished and well-formatted version of the README, ready for your `README.md` file on GitHub:
-
-```markdown
 # DegenToken
 
 A simple ERC20 token with additional features for minting, burning, transferring, and redeeming tokens for virtual merchandise.
