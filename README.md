@@ -41,7 +41,7 @@ The `DegenToken.sol` contract is an ERC20 token implementation that allows the o
    - Example interactions:
    - name it Degen and DGN
 ![image](https://github.com/user-attachments/assets/eb1e7c79-2c6e-4e2e-922e-af52511f3bf1)
-Use the functions in this part of the window, make sure you check your account and who is using it before minting to prevent errors
+   -Use the functions in this part of the window, make sure you check your account and who is using it before minting to prevent errors
 ![image](https://github.com/user-attachments/assets/d30feb59-02c6-4fa4-a328-dfbf55996725)
 
 
