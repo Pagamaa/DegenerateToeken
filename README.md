@@ -1,6 +1,3 @@
-Certainly! Here’s the complete README in code form with all the instructions included:
-
-```markdown
 # DegenToken
 
 A simple ERC20 token with additional features for minting, burning, transferring, and redeeming tokens for virtual merchandise.
@@ -33,7 +30,7 @@ The `DegenToken.sol` contract is an ERC20 token implementation that allows the o
 
 2. **Deploy the Contract:**
    - Navigate to the "Deploy & Run Transactions" tab.
-   - Select the environment (e.g., JavaScript VM, Injected Web3).
+   - Select the environment 
    - Ensure your wallet is connected if using Injected Web3.
    - Click on "Deploy".
 
@@ -41,28 +38,6 @@ The `DegenToken.sol` contract is an ERC20 token implementation that allows the o
    - Use the Remix IDE interface to interact with the contract's functions.
    - Example interactions:
 
-   ```sh
-   // Mint tokens (only owner)
-   degenToken.mint("0xYourAddress", 1000);
-
-   // Burn tokens
-   degenToken.burn(100);
-
-   // Transfer tokens
-   degenToken.transferTokens("0xRecipientAddress", 50);
-
-   // Check balance
-   const balance = degenToken.checkBalance();
-
-   // Show available items
-   const items = degenToken.ShowItems();
-
-   // Redeem tokens for an item
-   degenToken.redeemTokens(1);
-
-   // Get redemption message
-   const message = degenToken.getRedemptionMessage();
-   ```
 
 ## Help
 
