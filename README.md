@@ -49,6 +49,10 @@ The `DegenToken.sol` contract is an ERC20 token implementation that allows the o
 
    ![Interact with Contract](https://github.com/user-attachments/assets/d30feb59-02c6-4fa4-a328-dfbf55996725)
 
+   This is an example output for the program, you can see in the console below that there are no errors.
+![image](https://github.com/user-attachments/assets/46c472a2-77be-443d-bbd8-9f00ddf01f7a)
+
+
 ## Help
 
 If you encounter common issues or problems, consider the following:
