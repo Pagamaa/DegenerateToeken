@@ -12,7 +12,7 @@ The `DegenToken.sol` contract is an ERC20 token implementation that allows the o
 
 1. **Clone the Repository:**
    ```sh
-   git clone [https://github.com/Pagamaa/DegenerateToken.git](https://github.com/Pagamaa/DegenerateToeken)
+   git clone https://github.com/Pagamaa/DegenerateToeken.git
    cd DegenerateToken
    ```
 
